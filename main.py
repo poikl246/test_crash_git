@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import requests
 
 headers = {'Accept': '*/*', 'Connection': 'keep-alive',
-           'User-Agent': 'Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36 OPR/56.0.3051.52',
+           'User-Agent': '123',
            'Cache-Control': 'max-age=0', 'DNT': '1', 'Upgrade-Insecure-Requests': '1'}
 
 
@@ -48,14 +48,7 @@ async def fetch_url_data(session, url, duraz, Namber):
             if tible1[4].find_all('td')[1].text == '—' and (tible1[8].find_all('td')[1].text == '1000') and (tible1[-9].find_all('td')[1].text == '1' or tible1[-9].find_all('td')[1].text == '2') and (float((tible1[-7].find_all('td')[1].text)[:-1]) >= 10 and float((tible1[-7].find_all('td')[1].text)[:-1]) <= 13) and (int(str(tible1[-4].find_all('td')[1].text).replace(' ', '')) >= 1000000):
 
                 data[f"{Namber}"] = {
-                    'Name': tible1[0].find_all('td')[1].text,
-                    'ISIN': tible1[1].find_all('td')[1].text,
-                    'Data stop': tible1[5].find_all('td')[1].text,
-                    'listing': tible1[-9].find_all('td')[1].text,
-                    'Doxodnost': tible1[-7].find_all('td')[1].text,
-                    'Doxod': tible1[-4].find_all('td')[1].text,
-                    'Duracia': tible1[-2].find_all('td')[1].text,
-                    'duraz':duraz
+                    "test":'test'
                 }
 
 
